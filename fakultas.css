@@ -1,0 +1,57 @@
+#fakultas {
+  padding: 0 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#fakultas h2 {
+  color: #273D52;
+  text-align: center;
+}
+
+#fakultas > .swap {
+  border-bottom: 1px solid #C9C5C5;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#fakultas > .swap > * {
+  width: 30%;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #273D52;
+}
+
+#fakultas > .swap > *.active {
+  border-bottom: 2px solid #273D52;
+}
+
+#fakultas .part-fakultas {
+  padding: 8px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  #fakultas .part-fakultas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+#fakultas .part-item {
+  background-color: #0a3f89;
+  height: 85px;
+  padding: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#fakultas img {
+  height: 60%;
+}

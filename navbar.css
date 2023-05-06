@@ -1,0 +1,49 @@
+.navbar {
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  max-height: 56px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  padding: 8px 12px;
+}
+
+.navbar a:hover {
+  color: #ababab;
+}
+
+.navbar img {
+  height: 44px;
+}
+
+.navbar-menu {
+  display: none;
+}
+
+.menu-trigger {
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex;
+  }
+
+  .menu-trigger {
+    display: none;
+  }
+}
+
+
+.menu-trigger:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+}

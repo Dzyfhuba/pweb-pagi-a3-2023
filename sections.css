@@ -1,0 +1,25 @@
+#sections {
+  background-color: #0a3f89;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+}
+
+#sections > * {
+  width: 75%;
+}
+
+@media (min-width: 360px) {
+  #sections > * {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  #sections > * {
+    width: 25%;
+    max-width: 150px;
+  }
+}

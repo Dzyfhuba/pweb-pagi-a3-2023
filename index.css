@@ -1,0 +1,8 @@
+/* wajib */
+body {
+  margin: 0;
+}
+
+.active {
+  font-weight: bold;
+}
