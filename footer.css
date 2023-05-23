@@ -3,3 +3,18 @@ footer {
   background-color: #052A4E;
   margin: 24px 0 0 0;
 }
+
+footer * {
+  color: white;
+}
+
+footer h1 {
+  font-size: 18px;
+}
+
+@media (min-width: 400px){
+  footer h1 {
+    font-size: 24px;
+    display: none;
+  }
+}
