@@ -1,0 +1,33 @@
+[{
+  "id": 1,
+  "faculty": "Marketing",
+  "image": "http://dummyimage.com/566x683.png/ff4444/ffffff"
+}, {
+  "id": 2,
+  "faculty": "Research and Development",
+  "image": "http://dummyimage.com/503x490.png/5fa2dd/ffffff"
+}, {
+  "id": 3,
+  "faculty": "Legal",
+  "image": "http://dummyimage.com/520x566.png/5fa2dd/ffffff"
+}, {
+  "id": 4,
+  "faculty": "Legal",
+  "image": "http://dummyimage.com/571x575.png/5fa2dd/ffffff"
+}, {
+  "id": 5,
+  "faculty": "Training",
+  "image": "http://dummyimage.com/603x525.png/cc0000/ffffff"
+}, {
+  "id": 6,
+  "faculty": "Sales",
+  "image": "http://dummyimage.com/562x728.png/cc0000/ffffff"
+}, {
+  "id": 7,
+  "faculty": "Business Development",
+  "image": "http://dummyimage.com/555x663.png/dddddd/000000"
+}, {
+  "id": 8,
+  "faculty": "Product Management",
+  "image": "http://dummyimage.com/557x674.png/cc0000/ffffff"
+}]

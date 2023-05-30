@@ -6,6 +6,9 @@
   align-items: center;
   padding: 4px 8px;
   max-height: 56px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 .navbar a {
@@ -28,6 +31,18 @@
   display: none;
 }
 
+.navbar-menu.open { 
+  display: flex;
+  position: fixed;
+  background-color: #fff;
+  flex-direction: column;
+  left: 0;
+  top: 52px;
+  box-shadow: 0 10px 8px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
 .menu-trigger {
   background-color: transparent;
   border: none;
@@ -37,6 +52,7 @@
   .navbar-menu {
     display: flex;
   }
+
 
   .menu-trigger {
     display: none;
