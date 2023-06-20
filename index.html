@@ -46,6 +46,13 @@
     </div>
     <div class="part-fakultas"></div>
   </section>
+
+  <form id="login">
+    <input type="email" name="email" placeholder="insert your email">
+    <input type="password" name="password" placeholder="insert your password">
+    <button type="submit">Login</button>
+  </form>
+  <h1 id="status">Status: <span></span></h1>
   
   <section id="gallery">
     <h1>Gallery</h1>
@@ -53,9 +60,40 @@
   </section>
   
   <footer></footer>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
   <script src="navbar.js"></script>
   <script src="content.js"></script>
-  <script src="gallery.js"></script>
+  <!-- <script src="gallery.js"></script> -->
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const supabase = createClient('https://blqpdfqgqvjanafcrhjv.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJscXBkZnFncXZqYW5hZmNyaGp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODcyNDU4NzAsImV4cCI6MjAwMjgyMTg3MH0.d0C3ch2W8o-eZ8I7R5wU8I2XiXwsSA6iHn9rKxMdyrc')
+
+    console.log(document.querySelector('form#login'))
+    document.querySelector('form#login').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const status = document.querySelector('h1#status>span')
+
+      const body = {
+        email: e.target.querySelector('input[name="email"]').value,
+        password: e.target.querySelector('input[name="password"]').value
+      }
+      console.log(body)
+
+      status.innerHTML = 'LOADING...'
+      const { data, error } = await supabase.auth.signInWithPassword(body)
+
+      if (error) {
+        status.innerHTML = 'ERROR'
+      } else {
+        status.innerHTML = 'LOGIN BERHASIL'
+      }
+    })
+
+  </script>
 </body>
 
 </html>
