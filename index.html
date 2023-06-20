@@ -65,6 +65,8 @@
 
   <script src="navbar.js"></script>
   <script src="content.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- <script src="gallery.js"></script> -->
 
   <script type="module">
@@ -84,12 +86,16 @@
       console.log(body)
 
       status.innerHTML = 'LOADING...'
+      Swal.showLoading()
       const { data, error } = await supabase.auth.signInWithPassword(body)
+
 
       if (error) {
         status.innerHTML = 'ERROR'
+        Swal.fire('ERROR', undefined, 'error')
       } else {
         status.innerHTML = 'LOGIN BERHASIL'
+        Swal.fire('LOGIN BERHASIL', undefined, 'success')
       }
     })
 
